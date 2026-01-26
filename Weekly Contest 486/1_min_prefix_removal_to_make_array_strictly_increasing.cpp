@@ -13,12 +13,8 @@ public:
 
         int suffixStart = n - 1;
 
-        while (suffixStart > 0) {
-            if (nums[suffixStart] > nums[suffixStart - 1]) {
-                suffixStart--;
-            } else {
-                break;
-            }
+        while (suffixStart > 0 && nums[suffixStart] > nums[suffixStart - 1]) {
+            suffixStart--;
         }
 
         return suffixStart;
